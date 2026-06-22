@@ -21,7 +21,8 @@ def test_filter_even_numbers():
 
 # 5. count vowels
 def test_count_vowels():
-   assert count_vowels ("water") == 2
+    assert count_vowels("AEIOU") == 5
+    assert count_vowels("water") == 2
 
 # 6. count words
 def test_count_words():
@@ -31,20 +32,40 @@ def test_count_words():
         "cat":1
     }
 # 7. most common item
+def test_common_item():
+    assert most_common_item(["lemon", "ham", "bacon", "lemon"]) == "lemon"
+
+def test_common_item():
+    assert most_common_item([1,4,3,3,3,6,7]) == 3
 
 # 8. palindrome
+def test_is_palindrome():
+    assert is_palindrome("rotor") is True
+    assert is_palindrome("bed") is False
 
 # 9. mask email address
 
 # 10.discount
+def test_calculate_discount():
+    assert calculate_discount(100,10) == 90
+    assert calculate_discount(100,30) == 70
 
 #11. grade scores
+def test_grade_score():
+    assert grade_score(90) == "A*"
+    assert grade_score(60) == "C"
 
 #12. calculate total cost of shopping basket
+def test_calculate_total_basket():
+    assert calculate_total_basket([(10,1), (2,5)]) == 20
 
 #13. passes and fails
+def test_count_passes_and_fails():
+    assert count_passes_and_fails([30,70,20]) == {"pass":1, "fail":2}
 
 #14. filter odd numbers
+def test_filter_odd_numbers():
+    assert filter_odd_numbers({1,2,3,4,5,6}) == [1,3,5]
 
 #15. shortest words
 def test_find_shortest_word():
