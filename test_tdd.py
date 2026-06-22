@@ -5,6 +5,7 @@ from tdd import *
 def test_is_even():
     assert is_even(2) is True
     assert is_even(3) is False
+    assert is_even (4) is True
 
 #2. get intials
 def test_get_intials():
@@ -19,9 +20,16 @@ def test_filter_even_numbers():
     assert filter_even_numbers([1,2,3,4,5,6,7]) == [2,4,6]
 
 # 5. count vowels
+def test_count_vowels():
+   assert count_vowels ("water") == 2
 
 # 6. count words
-
+def test_count_words():
+    assert count_words("the crazy crazy cat") == {
+        "the": 1,
+        "crazy": 2,
+        "cat":1
+    }
 # 7. most common item
 
 # 8. palindrome
